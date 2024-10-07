@@ -15,6 +15,12 @@ function adicionar() {
     let valorProduto = produto.split('R$')[1];
     let quantidade = document.getElementById('quantidade').value;
 
+    //Validando quantidade de itens
+    if (quantidade == 0) {
+        alert('Insira uma quantidade valida de produtos');
+        return;
+    }
+
     //Calculando valor dos produtos
     let preco = valorProduto * quantidade;
 
@@ -29,6 +35,8 @@ function adicionar() {
 
     //Resetando valor de 'quantidade'
     document.getElementById('quantidade').value = ''; 
+
+    
         
        
         }
